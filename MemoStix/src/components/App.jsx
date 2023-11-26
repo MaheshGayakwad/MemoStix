@@ -23,7 +23,7 @@ function App() {
   const fetchData = async () => {
     console.log(1);
     try {
-      const data = await axios.get("http://localhost:3000/get");
+      const data = await axios.get("https://memostix.onrender.com/get");
       setNotes(data.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -40,7 +40,7 @@ function App() {
       
     try {
       // Make a request using Axios
-      const response = await axios.post('http://localhost:3000/add' , {notes:newNote});
+      const response = await axios.post('https://memostix.onrender.com/add' , {notes:newNote});
       fetchData();
     } catch (error) {
       // Handle errors
@@ -57,7 +57,7 @@ function App() {
    
    
      try {
-      const response =  await axios.delete("http://localhost:3000/deleteRoute/" + id);
+      const response =  await axios.delete("hhttps://memostix.onrender.com/deleteRoute/" + id);
     
        } catch (error) {
         console.error("Error fetching data:", error);
@@ -72,7 +72,7 @@ function App() {
 
         
        try {
-        const updated = await axios.put("http://localhost:3000/update/" + id );
+        const updated = await axios.put("https://memostix.onrender.com/update/" + id );
         fetchData();
        } catch (error) {
         console.error("Error fetching data:", error);
