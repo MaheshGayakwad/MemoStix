@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AddIcon from '@mui/icons-material/Add';
-import Fab from '@mui/material/Fab';
-import Zoom from '@mui/material/Zoom';
+// import AddIcon from '@mui/icons-material/Add';
+// import Fab from '@mui/material/Fab';
+// import Zoom from '@mui/material/Zoom';
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -62,10 +62,12 @@ function CreateArea(props) {
           rows= {clicked ? 3 : 1}
         />
        
-       <Zoom in = {clicked}> 
-       <Fab  className = "fab"  onClick={submitNote}><AddIcon/>
-       </Fab>
-       </Zoom>
+       
+       <button  className = "fab"  onClick={submitNote}>
+
+       Add
+       </button>
+       
       </form>
     </div>
   );

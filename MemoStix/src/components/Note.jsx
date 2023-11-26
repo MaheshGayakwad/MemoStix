@@ -1,7 +1,7 @@
 import React from "react";
-import DeleteIcon from '@mui/icons-material/Delete';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+// import DeleteIcon from '@mui/icons-material/Delete';
+// import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+// import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 
 function Note(props) {
@@ -22,10 +22,10 @@ return (
       <h1 style={styling}>{props.title}</h1>
       <p style={styling} >{props.content}</p>
       
-      <button onClick={handleClick}><DeleteIcon/></button>
+      <button onClick={handleClick}>Delete</button>
       <button onClick={()=>props.updateClick(props.id)}>
 
-        {props.cross ? <CheckCircleOutlineIcon/> :<RadioButtonUncheckedIcon></RadioButtonUncheckedIcon> }
+        {props.cross ? O : X }
 
       </button>
     </div>
