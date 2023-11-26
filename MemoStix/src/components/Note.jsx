@@ -25,7 +25,7 @@ return (
       <button onClick={handleClick}>Delete</button>
       <button onClick={()=>props.updateClick(props.id)}>
 
-        {props.cross ? O : X }
+        {props.cross ? "O" : "X" }
 
       </button>
     </div>
