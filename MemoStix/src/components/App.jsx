@@ -26,7 +26,7 @@ function App() {
       const data = await axios.get("http://localhost:3000/get");
       setNotes(data.data);
     } catch (error) {
-      console.log(error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -44,7 +44,7 @@ function App() {
       fetchData();
     } catch (error) {
       // Handle errors
-      console.log(error);
+      console.error("Error fetching data:", error);
     }
   };
   postMount();
@@ -60,7 +60,7 @@ function App() {
       const response =  await axios.delete("http://localhost:3000/deleteRoute/" + id);
     
        } catch (error) {
-        console.log(error);
+        console.error("Error fetching data:", error);
       }
 
       fetchData();
@@ -75,7 +75,7 @@ function App() {
         const updated = await axios.put("http://localhost:3000/update/" + id );
         fetchData();
        } catch (error) {
-        console.log(error);
+        console.error("Error fetching data:", error);
        }
 
   }
