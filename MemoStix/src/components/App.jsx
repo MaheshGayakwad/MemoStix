@@ -4,15 +4,9 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 import axios from "axios";
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 
-// Add a global unhandled rejection handler
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-  // Application-specific logging, re-throwing, or any other handling here
-});
+
 
 
 function App() {
