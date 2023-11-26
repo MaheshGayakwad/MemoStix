@@ -1,7 +1,6 @@
 import React from "react";
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-// import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import { Button } from 'antd';
+import { DeleteFilled  , StopOutlined , CheckCircleOutlined  } from "@ant-design/icons"
 
 
 function Note(props) {
@@ -22,12 +21,12 @@ return (
       <h1 style={styling}>{props.title}</h1>
       <p style={styling} >{props.content}</p>
       
-      <button onClick={handleClick}>Delete</button>
-      <button onClick={()=>props.updateClick(props.id)}>
+      <Button  onClick={handleClick} icon = {<DeleteFilled />} ></Button>
+      <Button  onClick={()=>props.updateClick(props.id) } >
 
-        {props.cross ? "O" : "X" }
+        {props.cross ? <StopOutlined></StopOutlined> : <CheckCircleOutlined></CheckCircleOutlined> }
 
-      </button>
+      </Button>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import AddIcon from '@mui/icons-material/Add';
-// import Fab from '@mui/material/Fab';
-// import Zoom from '@mui/material/Zoom';
+import { Button } from 'antd';
+import {  PlusOutlined } from "@ant-design/icons"
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -63,10 +62,7 @@ function CreateArea(props) {
         />
        
        
-       <button  className = "fab"  onClick={submitNote}>
-
-       Add
-       </button>
+      {clicked ?  <Button   style={{ fontSize: '16px' }}  onClick={submitNote} icon = {<PlusOutlined></PlusOutlined>} ></Button> : null}
        
       </form>
     </div>
